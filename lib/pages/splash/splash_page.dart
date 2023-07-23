@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:funny/pages/home/home_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatelessWidget {
@@ -29,7 +30,9 @@ class SplashPage extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=> HomePage()));
+                },
                 child: Text(
                   'Start',
                   style: GoogleFonts.sriracha(
@@ -38,7 +41,9 @@ class SplashPage extends StatelessWidget {
                     fontStyle: FontStyle.italic,
                     fontWeight: FontWeight.bold,
                   ),
+                              
                 ),
+
               ),
             ],
           ),
